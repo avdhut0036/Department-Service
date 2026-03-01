@@ -1,0 +1,23 @@
+
+server:
+  port: 9095
+
+spring:
+  config:
+    activate:
+      on-profile: PROD
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:mysql}:3306/${MYSQL_DATABASE:devops}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+        hibernate:
+            dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+welcome:
+  message: Welcome to the Pandora World Real Users ......!!!!Njoi the amazing experience.

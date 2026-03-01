@@ -1,0 +1,27 @@
+
+server:
+  port: 9898
+
+spring:
+  config:
+    activate:
+      on-profile: QA
+  datasource:
+    url: jdbc:mysql://localhost:3306/welcomePandora_qa
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+welcome:
+  message: Welcoem to Pandora World QA engineers...........Njoi the bugs...Bro....
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans,configprops"
